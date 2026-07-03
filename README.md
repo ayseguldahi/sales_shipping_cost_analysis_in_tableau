@@ -1,6 +1,6 @@
-# 📈 Sales and Shipping Cost Analysis in Tableau
+# Sales and Shipping Cost Analysis in Tableau
 
-## 🧾 Project Overview
+## Project Overview
 
 This Tableau project analyzes sales performance and shipping costs using a global superstore dataset. It focuses on uncovering regional patterns, profit dynamics, and delivery efficiency through advanced calculations and interactive dashboards. The project is enhanced with powerful Tableau features such as:
 
@@ -14,7 +14,7 @@ The goal is to present a visually intuitive and analytically rich dashboard that
 
 ---
 
-## 📂 File Structure
+## File Structure
 
 ```
 📁 sales_shipping_cost_analysis_in_tableau/
@@ -25,25 +25,25 @@ The goal is to present a visually intuitive and analytically rich dashboard that
 
 ---
 
-## 🎯 Key Features
+## Key Features
 
-### 📌 Sales vs. Shipping Cost Dashboard
+### Sales vs. Shipping Cost Dashboard
 - **Sales-to-Shipping Ratio by Region**
 - **Monthly Sales Trends**
 - **Top-Selling Categories and Sub-Categories**
 - **Shipping Cost Overruns**
 - **Dynamic Profit Indicator (colored by region)**
 
-### 🧠 Insightful Questions Addressed
+### Insightful Questions Addressed
 - Which regions suffer from high shipping costs relative to revenue?
 - What are the most and least profitable product segments?
 - Which months yield higher shipping cost per unit sold?
 
 ---
 
-## 📊 Advanced Calculations
+## Advanced Calculations
 
-### 🔹 Profit Categorization (Custom Calculated Field)
+### Profit Categorization (Custom Calculated Field)
 ```tableau
 IF [Profit] > 0 THEN "Profitable"
 ELSEIF [Profit] = 0 THEN "Break-even"
@@ -51,12 +51,12 @@ ELSE "Loss"
 END
 ```
 
-### 🔹 Shipping Cost Per Sale
+### Shipping Cost Per Sale
 ```tableau
 [Shipping Cost] / [Sales]
 ```
 
-### 🔹 Conditional Formatting for KPIs
+### Conditional Formatting for KPIs
 ```tableau
 IF [Profit Ratio] > 0.25 THEN "High Margin"
 ELSEIF [Profit Ratio] > 0.10 THEN "Moderate Margin"
@@ -66,19 +66,19 @@ END
 
 ---
 
-## 🔍 Level of Detail (LOD) Calculations
+## Level of Detail (LOD) Calculations
 
-### 🔸 Fixed LOD – Average Shipping Cost per Region
+### Fixed LOD – Average Shipping Cost per Region
 ```tableau
 { FIXED [Region] : AVG([Shipping Cost]) }
 ```
 
-### 🔸 Include LOD – Profit per Category by State
+### Include LOD – Profit per Category by State
 ```tableau
 { INCLUDE [State] : SUM([Profit]) }
 ```
 
-### 🔸 Exclude LOD – Total Sales ignoring Segment
+### Exclude LOD – Total Sales ignoring Segment
 ```tableau
 { EXCLUDE [Segment] : SUM([Sales]) }
 ```
@@ -87,7 +87,7 @@ These LODs enable deep-dive exploration of data independent of the dashboard fil
 
 ---
 
-## 📌 Filters & Interactivity
+## Filters & Interactivity
 - Multi-select drop-downs for **Region**, **Category**, and **Year**
 - **Date range slider** for monthly trend analysis
 - Hover tooltips with dynamic metrics: *Sales, Profit, Quantity, Profit Ratio*
@@ -95,7 +95,7 @@ These LODs enable deep-dive exploration of data independent of the dashboard fil
 
 ---
 
-## 🧠 Analytical Takeaways
+## Analytical Takeaways
 
 - The **West** region has the highest average shipping cost per order.
 - **Technology** in the **Central** region consistently outperforms other segments.
@@ -104,7 +104,7 @@ These LODs enable deep-dive exploration of data independent of the dashboard fil
 
 ---
 
-## 🚀 How to Open the Project
+## How to Open the Project
 
 1. Open Tableau Desktop.
 2. Load the file: `Sales & Shipping Cost Analysis in Tableau.twbx`
@@ -112,6 +112,6 @@ These LODs enable deep-dive exploration of data independent of the dashboard fil
 
 ---
 
-## 👩‍🎓 Author
+## Author
 
 **Aysegul Dahi**  
